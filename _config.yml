@@ -1,0 +1,7 @@
+collections:
+    - fronts
+exclude:
+    - 'README.md'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'confusing_command_to_run_jekyll'
