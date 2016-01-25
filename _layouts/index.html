@@ -24,18 +24,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-        <h2>Downloads</h2>
-        <table class="table">
-            <tr><th>File</th><th>Platform</th></tr>
-            <tr>
-                <td><a href="#">FAHBench-2.2.4.zip</a></td>
-                <td>Windows (zip)</td>
-            </tr>
-            <tr>
-                <td><a href="#">FAHBench-2.2.4.msi</a></td>
-                <td>Windows (msi)</td>
-            </tr>
-        </table>
+        {% for release in site.releases %}
+        {% if release.iscurrent %}
+            {{ release.content }}
+        {% endif %}
+        {% endfor %}
         <p><a class="btn btn-default" href="{{site.url}}/{{front.link}}" role="button">
             View details &raquo;
         </a></p>
