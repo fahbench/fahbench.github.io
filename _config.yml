@@ -1,3 +1,4 @@
+safe: True
 collections:
     - releases
 exclude:
