@@ -7,12 +7,9 @@ buttonLink: about
 image: folding-icon.png
 ---
 
-Blah blah blah
+How fast is your GPU? FAHBench runs a sample molecular dynamics calculation
+to benchmark GPUs as it pertains to biophysics research. FAHBench performs
+the same computations as those found on [Folding@Home].
 
-[tools]: {{site.url}}/software/
-
-[vijay pande]: http://pande.stanford.edu/
-[openmm]: http://openmm.org/
-[msmbuilder]: http://msmbuilder.org/
-[mdtraj]: http://mdtraj.org/
+[Folding@Home]: http://folding.stanford.edu/
 
