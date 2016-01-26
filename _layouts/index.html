@@ -24,16 +24,29 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
+        {% include jquery.html %}
         {% for release in site.releases %}
         {% if release.iscurrent %}
+            <h2>Latest Release <small>{{ release.title }}</small></h2>
             {{ release.content }}
+        <p>
+            <a href="#" id="release-details">
+            details &raquo;
+            </a>
+        </p>
+        <script type="text/javascript">
+            $("{{release.togglable}}").hide();
+            $("#release-details").click(function(e){
+                e.preventDefault();
+                $("{{release.togglable}}").toggle(200);
+            });
+        </script>
         {% endif %}
         {% endfor %}
-        <p><a class="btn btn-default" href="{{site.url}}/{{front.link}}" role="button">
-            View details &raquo;
-        </a></p>
     </div>
   </div>
 </div>
 
-{% include footer.html %}
+
+
+{% include footer-nojquery.html %}
