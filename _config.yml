@@ -6,3 +6,16 @@ exclude:
     - 'Gemfile'
     - 'Gemfile.lock'
     - 'confusing_command_to_run_jekyll'
+      # find fahbench/ -maxdepth 1 >> _config.yml
+    - fahbench/packaging
+    - fahbench/openmm
+    - fahbench/astylerc
+    - fahbench/workunits
+    - fahbench/README.md
+    - fahbench/CMakeLists.txt
+    - fahbench/LICENSE.txt
+    - fahbench/run_astyle.sh
+    - fahbench/Vagrantfile
+    - fahbench/cmake
+    - fahbench/fahbench
+    - fahbench/doc/Doxyfile
