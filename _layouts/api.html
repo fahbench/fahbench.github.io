@@ -1,0 +1,35 @@
+
+{% include header.html %}
+
+<div class="container">
+    <div class="page-header">
+        <h1>{{ page.title }}
+            {% if page.subTitle %}
+            <small>{{ page.subTitle }}</small>
+            {% endif %}
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <ul>
+            {% for kls in site.api %}
+            
+            <li>
+            {% if kls.title == page.title %}
+            <b>{{kls.title}}</b>
+            {% else %}
+            <a href="{{site.url}}/api/{{kls.title}}.html">
+                {{kls.title}}
+            </a>
+            {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            {{ content }}
+        </div>
+
+    </div>
+</div>
+
+{% include footer.html %}

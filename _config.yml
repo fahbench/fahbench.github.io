@@ -1,6 +1,11 @@
 safe: True
 collections:
-    - releases
+    api:
+        output: true
+    releases:
+        output: false
+
+
 defaults:
     - scope:
           path: "fahbench/doc"
@@ -11,6 +16,7 @@ exclude:
     - 'Gemfile'
     - 'Gemfile.lock'
     - 'confusing_command_to_run_jekyll'
+    - 'doxygen'
       # find fahbench/ -maxdepth 1 >> _config.yml
     - fahbench/packaging
     - fahbench/openmm
