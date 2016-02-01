@@ -4,6 +4,12 @@ import glob
 import re
 import os
 
+# TODO: refactor template into file
+# TODO: refactor index.md into file
+# TODO: hide section when there's no attributes/functions
+# TODO: order pages
+
+
 template = Template(
 """---
 title: {{klass.name}}
