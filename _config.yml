@@ -1,6 +1,11 @@
 safe: True
 collections:
     - releases
+defaults:
+    - scope:
+          path: "fahbench/doc"
+      values:
+          permalink: "/:basename"
 exclude:
     - 'README.md'
     - 'Gemfile'
