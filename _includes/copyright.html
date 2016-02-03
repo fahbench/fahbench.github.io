@@ -2,5 +2,8 @@
   <hr>
   <footer>
     <p>&copy; Matthew P. Harrigan 2016</p>
+    {% if {{page.footer}} %}
+    <p>{{page.footer}}</p>
+    {% endif%}
   </footer>
 </div> 
