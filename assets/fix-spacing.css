@@ -3,3 +3,12 @@ body {
   padding-top: 30px;
   padding-bottom: 20px;
 }
+
+/* Anchor links scroll down a bit to account for fixed navbar */
+h3:before {
+  display: block;
+  content: " ";
+  margin-top: -60px;
+  height: 60px;
+  visibility: hidden;
+}
