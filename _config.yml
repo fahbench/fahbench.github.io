@@ -8,6 +8,7 @@ defaults:
           permalink: "/:basename"
 exclude:
     - 'README.md'
+    - 'LICENSE'
     - 'Gemfile'
     - 'Gemfile.lock'
     - 'jekyll.sh'
