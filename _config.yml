@@ -10,7 +10,7 @@ exclude:
     - 'README.md'
     - 'Gemfile'
     - 'Gemfile.lock'
-    - 'confusing_command_to_run_jekyll'
+    - 'jekyll.sh'
       # find fahbench/ -maxdepth 1 >> _config.yml
     - fahbench/packaging
     - fahbench/openmm
