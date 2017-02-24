@@ -1,47 +1,38 @@
-
-{% include header.html %}
+---
+layout: bootstrap
+---
 
 <div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
-                <h1>{{ page.h1 }}</h1>
-                {{ content }}
-            </div>
-            <div class="col-sm-4">
-                <img src="{{site.url}}/assets/{{page.image}}"
-                class="img-responsive"/>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>{{ page.h1 }}</h1>
+        {{ content }}
+      </div>
+      <div class="col-sm-4">
+          <img src="{{site.url}}/assets/{{page.image}}" class="img-responsive"/>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-        {% include jquery.html %}
-        {% for release in site.releases %}
-        {% if release.iscurrent %}
-            <h2>Latest Release <small>{{ release.title }}</small></h2>
-            {{ release.content }}
-        <p>
-            <a href="#" id="release-details" style="padding: 8px">
-            details &raquo;
-            </a>
-        </p>
+      {% for release in site.releases %}
+      {% if release.iscurrent %}
+        <h2>Latest Release <small>{{ release.title }}</small></h2>
+        {{ release.content }}
+        <p><a href="#" id="release-details" style="padding: 8px">details &raquo;</a></p>
         <script type="text/javascript">
-            $("{{release.togglable}}").hide();
-            $("#release-details").click(function(e){
-                e.preventDefault();
-                $("{{release.togglable}}").toggle(200);
-            });
+          $("{{release.togglable}}").hide();
+          $("#release-details").click(function(e){
+              e.preventDefault();
+              $("{{release.togglable}}").toggle(200);
+          });
         </script>
-        {% endif %}
-        {% endfor %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>
-
-
-
-{% include footer-nojquery.html %}
